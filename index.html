@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Events List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-circles"></div>
+  <div class="events-container">
+    <h2>Upcoming Events</h2>
+    <div class="event">
+      <h3>Workshop on Web Design</h3>
+      <p>Date: January 15, 2024</p>
+      <p>Time: 3:00 PM - 5:00 PM</p>
+      <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+    </div>
+    <div class="event">
+      <h3>Advanced JavaScript</h3>
+      <p>Date: February 10, 2024</p>
+      <p>Time: 10:00 AM - 12:00 PM</p>
+      <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+    </div>
+    <div class="event">
+      <h3>CSS Animations Workshop</h3>
+      <p>Date: March 5, 2024</p>
+      <p>Time: 2:00 PM - 4:00 PM</p>
+      <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+    </div>
+    <div id="hidden-events" style="display: none;">
+      <div class="event">
+        <h3>Event Title 4</h3>
+        <p>Date: April 20, 2024</p>
+        <p>Time: 1:00 PM - 3:00 PM</p>
+        <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+      </div>
+      <div class="event">
+        <h3>Event Title 5</h3>
+        <p>Date: May 15, 2024</p>
+        <p>Time: 9:00 AM - 11:00 AM</p>
+        <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+      </div>
+      <div class="event">
+        <h3>Event Title 6</h3>
+        <p>Date: June 10, 2024</p>
+        <p>Time: 4:00 PM - 6:00 PM</p>
+        <button class="delete-event-btn" onclick="deleteEvent(this)">Delete</button>
+      </div>
+    </div>
+    <button class="view-all-btn" onclick="viewAllEvents()">View All Events</button>
+    <button class="add-event-btn" onclick="addEvent()">Add Event</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
