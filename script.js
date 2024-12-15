@@ -46,16 +46,15 @@ function deleteEvent(button) {
 }
 
 
-// Listen for the scroll event
-window.addEventListener('scroll', function() {
-    // Get the scroll position
-    const scrollPosition = window.scrollY;
+// Zoom background circles on scroll
+window.addEventListener("scroll", function() {
+    let scrollAmount = window.scrollY;
 
-    // Select the background circles
-    const backgroundCircles = document.querySelector('.background-circles');
+    // Control the zooming of the circles based on scroll position
+    const circles = document.querySelector('.background-circles');
+    const zoomLevel = 1 + scrollAmount / 500; // Adjust the zoom intensity here (change 500 for more/less zoom)
 
-    // Scale the circles based on the scroll position
-    // Use a factor to control how much they zoom
-    const zoomFactor = 1 + scrollPosition / 1000; // Adjust this value for desired zoom effect
-    backgroundCircles.style.transform = `scale(${zoomFactor})`;
+    // Apply the zoom effect to both circles
+    circles.style.transform = `scale(${zoomLevel})`;
 });
+
